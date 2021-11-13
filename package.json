@@ -1,0 +1,60 @@
+{
+  "//1": "",
+  "//2": "xxxx",
+  "//3": "updating this file will download and update your packages",
+  "name": "hello-express",
+  "version": "0.0.1",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "akaneko": "^5.2.1",
+    "bad-words": "^3.0.3",
+    "can": "^6.6.0",
+    "chalk": "^4.1.1",
+    "codare.ai": "^1.0.0",
+    "db": "^3.3.1",
+    "discord-bots-api": "^0.0.2",
+    "discord-buttons": "^4.0.0",
+    "discord.js": "^12.5.3",
+    "express": "^4.17.1",
+    "fs": "^0.0.2",
+    "google": "^2.1.0",
+    "instagram-user": "^2.0.1",
+    "jimp": "^0.16.1",
+    "level-session-store": "^2.2.0",
+    "mathjs": "^10.0.0",
+    "moment": "^2.29.1",
+    "moment-duration-format": "^2.3.2",
+    "node-superfetch": "^0.2.3",
+    "os": "^0.1.1",
+    "passport": "^0.4.1",
+    "passport-google-oauth2": "^0.2.0",
+    "passport-oauth2": "^1.5.0",
+    "quick.db": "^7.1.2",
+    "simple-youtube-api": "^5.2.1",
+    "snekfetch": "^4.0.4",
+    "speedtest-net": "^2.2.0",
+    "version": "^0.1.2",
+    "weather-js": "^2.0.0",
+    "ytdl-core": "^4.8.0",
+    "common-tags": "^1.8.0",
+    "colors": "^1.4.0",
+    "nukleon": "^0.0.2",
+    "inflames.db": "^2.3.3"
+  },
+  "engines": {
+    "node": "12.x"
+  },
+  "repository": {
+    "url": "https://glitch.com/edit/#!/hello-express"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ]
+}
