@@ -130,52 +130,43 @@ client.on("error", e => {
 });
 
 client.login(process.env.token);
-//TOKENİ ENVDEN ÇIKARMAYIN VE KİMSEYE PAYLAŞMAYIN ALTYAPIYI REMİXLEDİĞİNİZ ANDA SORUMLULUK SİZE AİTDİR.
 client.on("ready", () => {
   client.channels.cache.get("905495858743738398").join();   
 })
-
-///////////// KOMUTLAR BAŞ
-
 client.on('voiceStateUpdate', async (oldState, newState) => {
-  if (newState.channel != null && newState.channel.name.startsWith('(2)👉 Tıklayın 👈')) {newState.guild.channels.create(`𝓥İ𝓟 ${newState.member.displayName}`, {type: 'voice',
+  if (newState.channel != null && newState.channel.name.startsWith('➕│2 Kişilik Oda')) {newState.guild.channels.create(`🎧 ${newState.member.displayName}`, {type: 'voice',
     parent: newState.channel.parent,})
    .then((cloneChannel) => {newState.setChannel(cloneChannel);
     cloneChannel.setUserLimit(2);})}
-  if (newState.channel != null && newState.channel.name.startsWith('(3)👉 Tıklayın 👈')) {newState.guild.channels.create(`𝓥İ𝓟 ${newState.member.displayName}`, {type: 'voice',
+  if (newState.channel != null && newState.channel.name.startsWith('➕│3 Kişilik Oda')) {newState.guild.channels.create(`🎧 ${newState.member.displayName}`, {type: 'voice',
     parent: newState.channel.parent,})
    .then((cloneChannel) => {newState.setChannel(cloneChannel);
     cloneChannel.setUserLimit(3);})}
-if (newState.channel != null && newState.channel.name.startsWith('(4)👉 Tıklayın 👈')) {newState.guild.channels.create(`𝓥İ𝓟 ${newState.member.displayName}`, {type: 'voice',
+if (newState.channel != null && newState.channel.name.startsWith('➕│4 Kişilik Oda')) {newState.guild.channels.create(`🎧 ${newState.member.displayName}`, {type: 'voice',
     parent: newState.channel.parent,})
    .then((cloneChannel) => {newState.setChannel(cloneChannel);
     cloneChannel.setUserLimit(4);})}
-if (newState.channel != null && newState.channel.name.startsWith('(5)👉 Tıklayın 👈')) {newState.guild.channels.create(`𝓥İ𝓟 ${newState.member.displayName}`, {type: 'voice',
+if (newState.channel != null && newState.channel.name.startsWith('➕│5 Kişilik Oda')) {newState.guild.channels.create(`🎧 ${newState.member.displayName}`, {type: 'voice',
     parent: newState.channel.parent,})
    .then((cloneChannel) => {newState.setChannel(cloneChannel);
     cloneChannel.setUserLimit(5);})}
-if (newState.channel != null && newState.channel.name.startsWith('(15)👉 Tıklayın 👈')) {newState.guild.channels.create(`𝓥İ𝓟 ${newState.member.displayName}`, {type: 'voice',
+if (newState.channel != null && newState.channel.name.startsWith('➕│15 Kişilik Oda')) {newState.guild.channels.create(`🎧 ${newState.member.displayName}`, {type: 'voice',
     parent: newState.channel.parent,})
    .then((cloneChannel) => {newState.setChannel(cloneChannel);
     cloneChannel.setUserLimit(15);})}
 // Kullanıcı ses kanalından ayrılınca ve kanalda kimse kalmazsa kanalı siler;
 if (oldState.channel != undefined) {
-  if (oldState.channel.name.startsWith('𝓥İ𝓟')) {
+  if (oldState.channel.name.startsWith('🎧')) {
     if (oldState.channel.members.size == 0) {oldState.channel.delete();}
       else { // İlk kullanıcı ses kanalından ayrılınca kanaldaki başka kullanıcı adını kanal adı yapar.
-        let matchMember = oldState.channel.members.find(x => `𝓥İ𝓟 ${x.displayName} kanalı` == oldState.channel.name);
+        let matchMember = oldState.channel.members.find(x => `🎧 ${x.displayName} kanalı` == oldState.channel.name);
         if (matchMember == null) {
-        oldState.channel.setName(`𝓥İ𝓟 ${oldState.channel.members.random().displayName} kanalı`)
+        oldState.channel.setName(`🎧 ${oldState.channel.members.random().displayName} kanalı`)
           }
        }
      }
    }
 });
-
-////////////// KOMUTLAR SON
-////////////// ALTI ELLEME
-
-
 client.on("guildCreate", guild => {
 
   let murphy = guild.owner
