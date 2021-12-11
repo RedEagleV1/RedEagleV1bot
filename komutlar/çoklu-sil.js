@@ -52,7 +52,7 @@ exports.run = async (client, message, args) => {
         component: menu
     });
 
-    const filter = menu => menu.clicker.user.id === message.author.id; //user filter (author only)
+    const filter = menu => menu.clicker.user.id === message.author.id; //kullanıcı filtresi 
     const collector = message.createMenuCollector(filter, {
         time: 120000
     });
